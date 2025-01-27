@@ -1,8 +1,13 @@
-import Image from "next/image";
+import ProductsViewer from "@/home/products-viewer.component";
+import { productsService } from "@/services";
 
-export default function Home() {
+
+export default async function Home() {
+  const data = await productsService.getAllProducts();
+  console.log(data);
+
   return (
-    <div className="w-full h-screen flex flex-col">
+    <div className="w-full h-screen flex flex-col items-center">
       {/* Barra de navegación */}
       <div className="w-full grid grid-cols-3">
         {/* Logo */}
@@ -22,7 +27,19 @@ export default function Home() {
       </div>
 
       {/* Banner principal */}
-      
+      <div className="w-full">
+
+      </div>
+
+      <div className="w-full max-w-[1836px] flex flex-col">
+        {/* Categoría de recomendados */}
+        <ProductsViewer products={data} />
+      </div>
+
+      {/* Categoría de Lo Más Nuevo */}
+      <div className="w-full">
+
+      </div>
     </div>
   );
 }
