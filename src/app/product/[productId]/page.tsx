@@ -1,5 +1,7 @@
 import Header from "@/components/header.component";
+import { useAppDispatch, useAppSelector } from "@/hooks/redux.hooks";
 import { productsService } from "@/services";
+import ProductActions from "./components/product-actions.component";
 
 export default async function ProductDetail({ params, }: { params: Promise<{ productId: string }> }) {
     const productId = (await params).productId;
@@ -34,11 +36,7 @@ export default async function ProductDetail({ params, }: { params: Promise<{ pro
 
                         <p>{productDetails.description}</p>
 
-                        <button
-                            className="bg-primary hover:bg-primary-tint w-1/2 px-4 py-2 rounded-full text-primary-contrast font-bold"
-                        >
-                            COMPRAR
-                        </button>
+                        <ProductActions product={productDetails} />
                     </div>
                 </div>
             </div>

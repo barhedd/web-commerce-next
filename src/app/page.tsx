@@ -1,5 +1,5 @@
 import Header from "@/components/header.component";
-import ProductsViewer from "@/home/products-viewer.component";
+import ProductsViewer from "@/components/home/products-viewer.component";
 import { productsService } from "@/services";
 
 export default async function Home() {
