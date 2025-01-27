@@ -19,6 +19,7 @@ export default function ProductsViewer({ products }: { products: any[] }) {
                         return (
                             <SwiperSlide key={product.id}>
                                 <ProductItem
+                                    id={product.id}
                                     image={product.image}
                                     name={product.title}
                                     category={product.category}
