@@ -20,16 +20,14 @@ export default function Header() {
 
             {/* Búsqueda y carrito*/}
             <div className="flex justify-end items-center gap-4">
-                <Link href="/cart">
-                    <div className="bg-light flex items-center pl-2 pr-20 py-1 gap-2 rounded-full cursor-pointer">
-                        <img src="/svg/search.svg" alt="search" className="h-[25px] object-contain" />
-                        <p className="text-lg">Buscar</p>
-                    </div>
-                </Link>
+                <div className="bg-light flex items-center pl-2 pr-20 py-1 gap-2 rounded-full cursor-pointer">
+                    <img src="/svg/search.svg" alt="search" className="h-[25px] object-contain" />
+                    <p className="text-lg">Buscar</p>
+                </div>
 
                 <div className="flex items-center gap-2">
-                    <img src="/svg/profile.svg" alt="profile" className="h-[30px] object-contain" />
-                    <img src="/svg/cart.svg" alt="cart" className="h-[35px] object-contain" /> 
+                    <img src="/svg/profile.svg" alt="profile" className="h-[30px] object-contain cursor-pointer" />
+                    <img src="/svg/cart.svg" alt="cart" className="h-[35px] object-contain cursor-pointer" />
                 </div>
             </div>
         </div>

@@ -50,16 +50,29 @@ export default function ProductActions({ product }: { product: any }) {
         <>
             {
                 isInCart &&
-                <div className="w-1/2 grid grid-cols-3">
-                    <button className="bg-primary hover:bg-primary-tint flex justify-center px-2 py-1 rounded-md">
-                        <img src="/svg/minus.svg" alt="plus" className="h-[25px] object-contain" />
-                    </button>
+                <div className="w-1/3 grid grid-cols-4 gap-2">
+                    <div className="flex">
+                        <button className="bg-primary hover:bg-primary-tint flex justify-center px-4 py-1 rounded-md">
+                            <img src="/svg/minus.svg" alt="plus" className="w-[25px] h-[25px] object-contain" />
+                        </button>
+                    </div>
 
-                    <input></input>
+                    <div className="col-span-2">
+                        <input 
+                            type="text"
+                            inputMode="numeric"
+                            id="quantity"
+                            name="quantity"
+                            value={1}
+                            className="w-full h-full text-center border border-solid border-primary rounded-md"
+                        />
+                    </div>
 
-                    <button className="bg-primary hover:bg-primary-tint flex justify-center px-2 py-1 rounded-md">
-                        <img src="/svg/plus.svg" alt="plus" className="h-[25px] object-contain"  />
-                    </button>
+                    <div className="flex">
+                        <button className="bg-primary hover:bg-primary-tint flex justify-center px-4 py-1 rounded-md">
+                            <img src="/svg/plus.svg" alt="plus" className="h-[25px] object-contain"  />
+                        </button>
+                    </div>
                 </div>
             }
 
